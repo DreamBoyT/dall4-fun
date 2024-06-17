@@ -10,7 +10,6 @@ Install the Azure OpenAI client library for JavaScript with npm:
 
 **npm install @azure/openai**
 
-
 **Output: **
 
 ![image](https://github.com/DreamBoyT/dall4-fun/assets/115417933/28276ec9-1424-45ca-b92c-df87b24bb8a9)
