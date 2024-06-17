@@ -1,0 +1,17 @@
+{
+  "name": "ai-fun-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@azure/openai": "^1.0.0-beta.12",
+    "express": "^4.19.2"
+  }
+}

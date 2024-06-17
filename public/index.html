@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <title>AI Image Generator</title>
+</head>
+
+<body class="max-w-4xl mx-auto">
+  <div class="theme-toggle-container">
+    <input type="checkbox" class="theme-checkbox" id="themeToggle" />
+    <label for="themeToggle"></label>
+  </div>
+
+  <div class="flex flex-col justify-center px-4 pt-12 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h1 class="text-4xl font-bold mb-10">AI Image Generator</h1>
+      <p class="text-md lg:text-xl mb-10">
+        This is a sample working prototype for the AI image generator application
+      </p>
+    </div>
+
+    <div class="bg-white shadow-md rounded-lg px-8 pt-6 pb-8 mb-4 flex flex-col my-2">
+
+        <div id="loading" class="hidden flex justify-center items-center mt-10">
+            <svg class="animate-spin h-10 w-10 text-gray-500" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor"
+                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647zm11-2.647A7.962 7.962 0 0120 12h-4c0 3.042-1.135 5.824-3 7.938l-3-2.647z">
+              </path>
+            </svg>
+          </div>
+          <div id="imageContainer" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-10" style="margin-bottom: 5px;"></div>
+
+<br>
+      <div class="mb-4 flex flex-col gap-2">
+        <label for="text" class="text-gray-600">Description or Keyword</label>
+        <textarea id="text" class="input-style"
+          placeholder="Enter a short description of the image or a keyword"></textarea>
+        <label for="sizeSelect" class="text-gray-600">Image Size</label>
+        <select id="sizeSelect" class="input-style">
+          <option value="1024x1024">1024x1024</option>
+          <option value="1024x1792">1024x1792</option>
+          <option value="1792x1024">1792x1024</option>
+        </select>
+        <label for="styleSelect" class="text-gray-600">Image Style</label>
+        <select id="styleSelect" class="input-style">
+          <option value="vivid">Vivid</option>
+          <option value="natural">Natural</option>
+        </select>
+        <label for="qualitySelect" class="text-gray-600">Image Quality</label>
+        <select id="qualitySelect" class="input-style">
+          <option value="standard">Standard</option>
+          <option value="hd">HD</option>
+        </select>
+      </div>
+      <div class="mt-2 text-right">
+        <button id="generateBtn" class="button-style">Generate</button>
+      </div>
+     
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
